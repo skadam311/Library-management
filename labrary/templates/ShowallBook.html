@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    
+
+    
+    <body>
+        <center>
+    <h1> All Book data <h1>
+    <h2><a href="http://127.0.0.1:8000/abc/addbook/">addbook</a></h2>
+    
+    <table border="1">
+    </hr>
+    <tr><th>bid</th><th>bname</th><th>author</th><th>price</th><th>edite</th><th>delete</th></tr>
+   
+        {%for book in book %}
+     <tr>
+        <td>{{book.id}}</td>
+        <td>{{book.bname}}</td> 
+        <td>{{book.author}}</td>
+        <td>{{book.price}}</td>
+        <td><a href="http://127.0.0.1:8000/abc/editbook/{{book.id}}">Edit</a></td>
+        <td><a href="http://127.0.0.1:8000/abc/deletebook/{{book.id}}">Delete</a></td>
+    </tr> 
+    
+        {% endfor %}
+        </table>
+    </center>
+    
+</body>
+</html>

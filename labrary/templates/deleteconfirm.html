@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>deletebook</title>
+</head>
+<body>
+    <form method="POST">
+        {%csrf_token%}
+        <table>
+            <tr><td>Are you sure you want to delete?</td>
+            </tr>
+            <tr><td><input type="submit" value="Yes" name="task"/>
+                <input type="submit" value="No" name="task"/></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
